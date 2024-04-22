@@ -52,7 +52,7 @@ function alterarContexto(contexto) {
         contexto.classList.remove('active')
     })
     html.setAttribute('data-contexto', contexto);
-    banner.setAttribute('src', `./imagens/${contexto}.png`)
+    banner.setAttribute('src', `../projeto-fokus-alura/imagens/${contexto}.png`)
     switch (contexto) {
         case "foco":
             titulo.innerHTML = `
@@ -96,13 +96,13 @@ startPauseBt.addEventListener('click', iniciarOuPausar)
 function iniciarOuPausar() {
     if(intervaloId){
         audioPause.play()
-        imagemPlayDoBt.setAttribute('src', `./imagens/play_arrow.png`)
+        imagemPlayDoBt.setAttribute('src', `../projeto-fokus-alura/imagens/play_arrow.png`)
         zerar()
         iniciarOuPausarBt.textContent = 'Continuar'
         return
     }
     audioPlay.play()
-    imagemPlayDoBt.setAttribute('src', `./imagens/pause.png`)
+    imagemPlayDoBt.setAttribute('src', `../projeto-fokus-alura/imagens/pause.png`)
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = 'Pausar'
 }
@@ -110,7 +110,7 @@ function iniciarOuPausar() {
 function zerar() {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = 'Iniciar'
-    imagemPlayDoBt.setAttribute('src', `./imagens/play_arrow.png`)
+    imagemPlayDoBt.setAttribute('src', `../projeto-fokus-alura/imagens/play_arrow.png`)
     intervaloId = null
 }
 
